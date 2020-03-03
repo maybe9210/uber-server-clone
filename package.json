@@ -1,0 +1,27 @@
+{
+  "name": "uber-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cd src && nodemon --exec ts-node index.ts -e ts,graphql",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maybe9210/uber-server-clone.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maybe9210/uber-server-clone/issues"
+  },
+  "homepage": "https://github.com/maybe9210/uber-server-clone#readme",
+  "devDependencies": {
+    "@types/node": "^13.7.7",
+    "nodemon": "^2.0.2",
+    "ts-node": "^8.6.2",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.8.3"
+  }
+}
