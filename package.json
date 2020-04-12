@@ -22,6 +22,8 @@
     "@types/helmet": "0.0.45",
     "@types/morgan": "^1.9.0",
     "@types/node": "^13.7.7",
+    "graphql-tools": "^4.0.7",
+    "merge-graphql-schemas": "^1.7.7",
     "nodemon": "^2.0.2",
     "ts-node": "^8.6.2",
     "tslint-config-prettier": "^1.18.0",
