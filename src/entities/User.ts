@@ -10,7 +10,11 @@ import {
   Entity,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
+  OneToMany,
+  ManyToOne,
 } from "typeorm";
+import Chat from "./Chat";
+import Message from "./Message";
 const BCRYPT_ROUNDS = 10;
 @Entity()
 class User extends BaseEntity {
@@ -65,6 +69,12 @@ class User extends BaseEntity {
   get fullName(): string {
     return `${this.firstName} ${this.lastName}`;
   }
+
+  @ManyToOne((type) => Chat, (chat) => chat.participants)
+  chat: Chat;
+
+  @OneToMany((type) => Message, (message) => message.user)
+  messages: Message[];
 
   @CreateDateColumn() createAt: string;
   @UpdateDateColumn() updateAt: string;
