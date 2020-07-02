@@ -35,7 +35,7 @@ class User extends BaseEntity {
   @Column({ type: "text" })
   lastName: string;
 
-  @Column({ type: "int" })
+  @Column({ type: "int", nullable: true })
   age: number;
 
   @Column({ type: "text" })
@@ -67,6 +67,9 @@ class User extends BaseEntity {
 
   @Column({ type: "double precision", default: 0 })
   lastOrientation: number;
+
+  @Column({ type: "text", nullable: true })
+  fbId: string;
 
   get fullName(): string {
     return `${this.firstName} ${this.lastName}`;
