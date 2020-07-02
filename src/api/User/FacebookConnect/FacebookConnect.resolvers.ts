@@ -29,11 +29,23 @@ const resolvers: Resolvers = {
         };
       }
 
-      return {
-        ok: false,
-        error: "error",
-        token: null,
-      };
+      try {
+        await User.create({
+          ...args,
+          profilePhoto: `http://graph.facebook.com/${fbId}/picture?type=square`,
+        }).save();
+        return {
+          ok: true,
+          error: null,
+          token: "coming soon",
+        };
+      } catch (error) {
+        return {
+          ok: false,
+          error: error.message,
+          token: null,
+        };
+      }
     },
   },
 };
