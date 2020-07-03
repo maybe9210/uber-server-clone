@@ -1,9 +1,9 @@
 import User from "../../../entities/User";
-import { Resolvers } from "../../../types/resolvers";
+import { Resolvers } from "src/types/resolvers";
 import {
   FacebookConnectMutationArgs,
   FacebookConnectResponse,
-} from "../../../types/graph";
+} from "src/types/graph";
 
 const resolvers: Resolvers = {
   Mutation: {

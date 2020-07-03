@@ -18,6 +18,7 @@ import Message from "./Message";
 import Verification from "./Verification";
 import Ride from "./Ride";
 const BCRYPT_ROUNDS = 10;
+
 @Entity()
 class User extends BaseEntity {
   @PrimaryGeneratedColumn() id: number;
