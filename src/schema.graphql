@@ -83,7 +83,6 @@ type User {
   fbId: String
   chat: Chat
   message: [Message]
-  verifications: [Verification]
   ridesAsPassenger: [Ride]
   ridesAsDriver: [Ride]
   createdAt: String!
@@ -104,8 +103,6 @@ type Verification {
   target: String!
   payload: String!
   key: String!
-  used: Boolean!
-  user: User!
   createdAt: String!
   updatedAt: String
 }

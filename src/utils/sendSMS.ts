@@ -10,6 +10,8 @@ export const sendSMS = (to: string, body: string) => {
   });
 };
 
-export const sendVerificationSMS = (to: string, key: string) => {
-  sendSMS(to, `Your verification key is : ${key}`);
+export const sendVerificationSMS = async (to: string, key: string) => {
+  console.log(`sendVerificationSMS, to=>${to}`);
+  const ret = await sendSMS(to, `Your verification key is : ${key}`);
+  console.log(`[sendSMS] ret => ${ret}`);
 };
